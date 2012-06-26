@@ -393,7 +393,7 @@ sub _doc_to_item {
     $values->{_version} = $doc->{_version};
     return Data::SearchEngine::Item->new(
         id      => $doc->{_id},
-        score   => $doc->{_score},
+        score   => $doc->{_score} || 0,
         values  => $values,
     );
 }
